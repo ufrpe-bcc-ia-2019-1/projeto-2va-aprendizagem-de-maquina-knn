@@ -11,12 +11,8 @@
 - Classificação
 
 ## Descrição:				
-Este projeto consiste em utilizar algoritmo de aprendizagem de maquina para resolver o problema de reconhecimento de caracteres com a classificação de dados    	 
+Este projeto consiste em utilizar algoritmo de aprendizagem de maquina para resolver o problema de reconhecimento de caracteres com a classificação de dados e depois classificar imagens de números manuscritos.
 
-O projeto consiste na utilização de métodos de aprendizagem de máquina para resolução de um **problema real**. A solução deve ser submetida no repositório do grupo no github (classroom), podendo ser feita tanto em Java ou Python, com o uso de frameworks tradicionais de aprendizagem de máquina (e.g., Weka, Scikit Learn, etc), preferencialmente no formato de um **Jupyter Notebook**. 
-
-A soluço deve ser acompanhada de experimentos para avaliação do desempenho dos algoritmos e parametrizações consideradas. Os resultados finais deverão ser apresentados em formato de artigo (template SBC), sendo o mesmo divido nas seções: **Introdução, Materiais, Métodos, Experimentos, Resultados e Conclusão**.				
-				
 ## Tipos de Projeto:				
 - **Aplicação**: Escolher uma aplicação de interesse, e explorar as melhores formas de aplicar aprendizagem de máquina para resolvê-lo. (este ẽ o tipo mais comum)			
 - **Replicação de resultados**: replicar os resultados em um artigo científico. No entanto, pedimos que, em vez de apenas replicar os resultados em um paper, também tente introduzir alguma variação (ou novo método) no estudo em questão.
@@ -28,7 +24,10 @@ A soluço deve ser acompanhada de experimentos para avaliação do desempenho do
 
 ## Seções do relatório final:	
 ### 1. INTRODUÇÂO
-Definir o problema em termos objetivos
+
+Este projeto se trata da execução de um algoritmo para treinamento e depois classificar imagens de números manuscritos, utilizando uma base de dados. A fim de tratar esse problema, foi escolhido o algoritmo K-Nearest Neighbor (KNN), arvore de decisão, naive bayes utilizaremos para poder obter um melhor resultado utilizando as distancias Euclidiana, Manhattan para obter uma melhor aproximação dos dados, fazendo assim uma comparação de resultados sendo assim muito útil em classificação de objetos.
+utilizaremos a linguagem python e o framework weka.
+
 
 ### 2. MATERIAIS
 Descrição da(s) base(s) de dados
@@ -52,22 +51,3 @@ Comentar os resultados obtidos e pontos passíveis de melhorias
 - [Exemplo 3](http://www.lbd.dcc.ufmg.br/colecoes/eniac/2016/059.pdf)
 - [Exemplo 4](https://portaldeconteudo.sbc.org.br/index.php/eniac/article/view/4477/4401)
 
-## Sugestões de Temas
-\# | Tema | Tipo | Dataset | Grupo 
---- | --- | --- | --- |--- 
-1 | Classificação de espécies de cobras/escorpiões	 |  Classificação (imagens) | http://www.snakebd.com  <br> http://snakedatabase.org/  <br> https://spidy.goliathus.com/english/gallery-scorpions.php
-2 | Classificação de questões (TREC dataset) | Classificação (textos) | http://cogcomp.org/Data/QA/QC/
-3 | Analise de Sentimentos em tweets | Classificação (textos) | http://www.sananalytics.com/lab/twitter-sentiment/
-4 | Recomendação de filmes sensível ao contexto | Recomendação | https://www.lucami.org/index.php/research/ldos-comoda-dataset/
-5 | Predição de No-Show | Classificação | 
-6 | Classificação de sons urbanos | Classificação (audio) | https://serv.cusp.nyu.edu/projects/urbansounddataset/
-7 | Análise de agrupamentos de dados de microarray | Clustering (biologia computacional) | https://schlieplab.org/Static/Supplements/CompCancer/datasets.htm
-8 | Manutenção Preditiva | Séries Temporais | 
-
-
-### Outros temas
-Caso você tenha alguma outra sugestão de tema, submeta a sua proposta contendo as seguintes seções:
-- Motivação: Que problema você está querendo resolver? Isto é uma aplicação, resultado teórico ou uma replicação de artigo?
-- Método: Quais técnicas de aprendizado de máquina você está planejando aplicar ou melhorar?
-- Experimentos planejados: quais experimentos você planeja executar? Como você planeja avaliar seu algoritmo de aprendizado de máquina?
-- Base de dados: você pretende usar alguma base de dados? Ela é acessível publicamente? Qual o link?
