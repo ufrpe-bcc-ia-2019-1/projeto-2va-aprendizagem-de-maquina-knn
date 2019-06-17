@@ -11,6 +11,8 @@
 - Classificação
 
 ## Descrição:				
+Este projeto consiste em utilizar algoritmo de aprendizagem de maquina para resolver o problema de reconhecimento de caracteres com a classificação de dados    	 
+
 O projeto consiste na utilização de métodos de aprendizagem de máquina para resolução de um **problema real**. A solução deve ser submetida no repositório do grupo no github (classroom), podendo ser feita tanto em Java ou Python, com o uso de frameworks tradicionais de aprendizagem de máquina (e.g., Weka, Scikit Learn, etc), preferencialmente no formato de um **Jupyter Notebook**. 
 
 A soluço deve ser acompanhada de experimentos para avaliação do desempenho dos algoritmos e parametrizações consideradas. Os resultados finais deverão ser apresentados em formato de artigo (template SBC), sendo o mesmo divido nas seções: **Introdução, Materiais, Métodos, Experimentos, Resultados e Conclusão**.				
