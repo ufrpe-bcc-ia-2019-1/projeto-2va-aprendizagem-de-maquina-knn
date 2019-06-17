@@ -6,6 +6,10 @@
 - Elias Jose
 - Irismar Neris
 
+## Tema: 
+- Reconhecimento de caracteres
+- Classificação
+
 ## Descrição:				
 O projeto consiste na utilização de métodos de aprendizagem de máquina para resolução de um **problema real**. A solução deve ser submetida no repositório do grupo no github (classroom), podendo ser feita tanto em Java ou Python, com o uso de frameworks tradicionais de aprendizagem de máquina (e.g., Weka, Scikit Learn, etc), preferencialmente no formato de um **Jupyter Notebook**. 
 
