@@ -15,9 +15,7 @@ Este projeto consiste em utilizar algoritmo de aprendizagem de maquina para reso
 
 ### 1. INTRODUÇÂO
 
-Este projeto se trata da execução de um algoritmo para treinamento e depois classificar imagens de números manuscritos, utilizando uma base de dados. A fim de tratar esse problema, foi escolhido o algoritmo K-Nearest Neighbor (KNN), arvore de decisão, naive bayes utilizaremos para poder obter um melhor resultado utilizando as distancias Euclidiana, Manhattan para obter uma melhor aproximação dos dados, fazendo assim uma comparação de resultados sendo assim muito útil em classificação de objetos.
-utilizaremos a linguagem python e o framework weka.
-
+Este projeto se trata da execução de um algoritmo para treinamento e depois classificar imagens de números manuscritos, utilizando uma base de dados. A fim de tratar esse problema, foi escolhido o algoritmo K-Nearest Neighbor (KNN), arvore de decisão, naive bayes para poder obter um melhor resultado verificando qual a taxa de erro menor dos algoritmos escolhidos, também utilizaremos as distancias Euclidiana, Manhattan, para saber as distancias entre os determinados pontos. Fazendo assim uma comparação de resultados entre os tres algoritmos assim sendo verificando o mas útil em classificação de objetos, utilizaremos a linguagem python e o framework weka.
 
 ### 2. MATERIAIS
 Descrição da(s) base(s) de dados
