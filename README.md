@@ -8,7 +8,7 @@
 
 ## Tema: 
 - Reconhecimento de caracteres
-- Classificação
+- Problema Classificação de dados
 
 ## Descrição:				
 Este projeto consiste em utilizar algoritmo de aprendizagem de maquina para resolver o problema de reconhecimento de caracteres com a classificação de dados e depois classificar imagens de números manuscritos.
