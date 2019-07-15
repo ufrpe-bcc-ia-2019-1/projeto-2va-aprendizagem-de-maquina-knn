@@ -128,50 +128,24 @@ def main():
     print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
     print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
 
- k = 5 
-    print('K = ' + repr(k))
-    for x in range(len(conjuntoTeste)):
-        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-        resultado = obterResposta(vizinhos)
-        previsoes.append(resultado)
-
-        vizinhos2 = obterVizinhos2(conjuntoTreino, conjuntoTeste[x], k)
-        resultado2 = obterResposta(vizinhos2)
-        previsoes2.append(resultado2)
-
-        vizinhos3 = obterVizinhos3(conjuntoTreino, conjuntoTeste[x], k)
-        resultado3 = obterResposta(vizinhos3)
-        previsoes3.append(resultado3)
-
-    precisao = obterPrecisao(conjuntoTeste, previsoes)
-    precisao2 = obterPrecisao(conjuntoTeste, previsoes2)
-    precisao3 = obterPrecisao(conjuntoTeste, previsoes3)
-    print('Precisão usando distância Euclidiana: ' + repr(precisao) + '%')
-    print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
-    print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
-
-k = 7 
-    print('K = ' + repr(k))
-    for x in range(len(conjuntoTeste)):
-        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-        resultado = obterResposta(vizinhos)
-        previsoes.append(resultado)
-
-        vizinhos2 = obterVizinhos2(conjuntoTreino, conjuntoTeste[x], k)
-        resultado2 = obterResposta(vizinhos2)
-        previsoes2.append(resultado2)
-
-        vizinhos3 = obterVizinhos3(conjuntoTreino, conjuntoTeste[x], k)
-        resultado3 = obterResposta(vizinhos3)
-        previsoes3.append(resultado3)
-
-    precisao = obterPrecisao(conjuntoTeste, previsoes)
-    precisao2 = obterPrecisao(conjuntoTeste, previsoes2)
-    precisao3 = obterPrecisao(conjuntoTeste, previsoes3)
-    print('Precisão usando distância Euclidiana: ' + repr(precisao) + '%')
-    print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
-    print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
-
-
+#k = 5
+    #print('K = ' + repr(k))
+    #for x in range(len(conjuntoTeste)):
+        #vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+       # resultado = obterResposta(vizinhos)
+      #  previsoes.append(resultado)
+     #   print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+    #precisao = obterPrecisao(conjuntoTeste, previsoes)
+    #print('Precisao: ' + repr(precisao) + '%')
+	
+#k = 9
+ #   print('K = ' + repr(k))
+  #  for x in range(len(conjuntoTeste)):
+   #     vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+    #    resultado = obterResposta(vizinhos)
+     #   previsoes.append(resultado)
+      #  print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+   # precisao = obterPrecisao(conjuntoTeste, previsoes)
+   # print('Precisao: ' + repr(precisao) + '%')
 
 main()
