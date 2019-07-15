@@ -30,15 +30,12 @@ Apresentar as diferentes parametrizações a serem consideradas
 Foi utilizada uma base de dados do The MNIST database of handwritten digits.  
  ● A base de dados foi dividida em ⅔ para treinamento e ⅓ para teste  
  ● A conversão das imagens foi feita usando um programa escrito em Python e  salva como um vetor de 784 posições.  
- ● Notepad++ foi utilizado para facilitar a rotular cada linha com a sua classe  especificada.  4. Implementação dos algoritmos  4.1. 
-
+ ● Notepad++ foi utilizado para facilitar a rotular cada linha com a sua classe  especificada.
+ 
 ### 4. EXPERIMENTOS E RESULTADOS
 Apresentação dos resultados obtidos
 - Tabela com os valores da medida de avaliação considerada (ex. taxa de acerto, etc)
 - Gráfico comparando os melhores resultados de cada método considerado
-
-
-
 
 ### 5. CONCLUSÃO
 Podemos verificar que o algoritmo KNN é bom algoritmo para classificação de objetos,  devido à sua simples implementação e uma taxa de acerto relativamente alta, porém um  alto custo computacional é exigido, pois o algoritmo guarda na memória todo conjunto  de treinamento. As 3 métricas utilizadas, a que teve a menor acurácia foi a distância de  Manhattan, devido que é uma simplificação da distância Euclidiana, porém devido à sua  simplicidade, teve o melhor desempenho. A que teve a melhor acurácia foi a distância  de Bray-Curis, juntamente com um desempenho satisfatório. Distância Euclidiana  obteve uma taxa de acertos alta, porém com o pior desempenho entre as três métricas,  devido que esta métrica precisa realizar mais cálculos matemáticos que as outras duas.   
