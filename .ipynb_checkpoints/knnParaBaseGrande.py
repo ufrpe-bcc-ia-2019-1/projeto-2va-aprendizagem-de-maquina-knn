@@ -91,24 +91,24 @@ def main():
     precisao = obterPrecisao(conjuntoTeste, previsoes)
     print('Precisao: ' + repr(precisao) + '%')
 	
-k = 5
-    print('K = ' + repr(k))
-    for x in range(len(conjuntoTeste)):
-        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-        resultado = obterResposta(vizinhos)
-        previsoes.append(resultado)
-        print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
-    precisao = obterPrecisao(conjuntoTeste, previsoes)
-    print('Precisao: ' + repr(precisao) + '%')
+#k = 5
+    #print('K = ' + repr(k))
+    #for x in range(len(conjuntoTeste)):
+        #vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+       # resultado = obterResposta(vizinhos)
+      #  previsoes.append(resultado)
+     #   print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+    #precisao = obterPrecisao(conjuntoTeste, previsoes)
+    #print('Precisao: ' + repr(precisao) + '%')
 	
-k = 9
-    print('K = ' + repr(k))
-    for x in range(len(conjuntoTeste)):
-        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-        resultado = obterResposta(vizinhos)
-        previsoes.append(resultado)
-        print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
-    precisao = obterPrecisao(conjuntoTeste, previsoes)
-    print('Precisao: ' + repr(precisao) + '%')
+#k = 9
+ #   print('K = ' + repr(k))
+  #  for x in range(len(conjuntoTeste)):
+   #     vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+    #    resultado = obterResposta(vizinhos)
+     #   previsoes.append(resultado)
+      #  print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+   # precisao = obterPrecisao(conjuntoTeste, previsoes)
+   # print('Precisao: ' + repr(precisao) + '%')
 		
 main()
