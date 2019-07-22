@@ -93,20 +93,43 @@ def obterPrecisao(conjuntoTeste, previsoes):	#Função para medir a acurácia da
         if conjuntoTeste[x][-1] == previsoes[x]:
             correto += 1
     return (correto / float(len(conjuntoTeste))) * 100.0
+#def naive():
+    #conjuntoTreino = []
+    #conjuntoTeste = []
+    #dividir = 0.67  # divide 33% da base de dados para teste e 67% para treino
+    #carregarBancoDeDados('basePequena.csv', dividir, conjuntoTreino, conjuntoTeste)
+    #print('Conjunto de treinamento: ') + repr(len(conjuntoTreino))
+    #print('Conjunto de teste: ') + repr(len(conjuntoTeste))
+    # Gerar previsões
+    #previsoes = []  # distância Euclidiana
+    #previsoes2 = []  # distância de Manhattan
+    #previsoes3 = []  # distância de Bray-Curtis
+    #conjuntoteste = 0
+    #conjuntotreino = 0
+    #totalconjunto = 0
+   # for x in range (len(conjuntoTeste)):
 
-def main():
-    #Preparar os dados
+      #  if (conjuntoTeste[5].equals("10")):
+     #       conjuntotreino+1
+    #    elif(conjuntoTeste[5].equals("5")):
+   #         conjuntoteste+1
+  #          totalconjunto = conjuntoteste + conjuntotreino
+ #       resultado = obterVizinhos(vizinhos)
+
+#        previsoes.append(resultado)
+def knn5():
     conjuntoTreino = []
     conjuntoTeste = []
-    dividir = 0.67				#divide 33% da base de dados para teste e 67% para treino
+    dividir = 0.67  # divide 33% da base de dados para teste e 67% para treino
     carregarBancoDeDados('basePequena.csv', dividir, conjuntoTreino, conjuntoTeste)
     print ('Conjunto de treinamento: ') + repr(len(conjuntoTreino))
     print ('Conjunto de teste: ') + repr(len(conjuntoTeste))
-    #Gerar previsões
-    previsoes = [] #distância Euclidiana
-    previsoes2 = [] #distância de Manhattan
-    previsoes3 = [] #distância de Bray-Curtis
-    k = 3 # testar com 5 e 19
+    # Gerar previsões
+    previsoes = []  # distância Euclidiana
+    previsoes2 = []  # distância de Manhattan
+    previsoes3 = []  # distância de Bray-Curtis
+
+    k = 5  #testa com k = 5
     print('K = ' + repr(k))
     for x in range(len(conjuntoTeste)):
         vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
@@ -120,6 +143,7 @@ def main():
         vizinhos3 = obterVizinhos3(conjuntoTreino, conjuntoTeste[x], k)
         resultado3 = obterResposta(vizinhos3)
         previsoes3.append(resultado3)
+        print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
 
     precisao = obterPrecisao(conjuntoTeste, previsoes)
     precisao2 = obterPrecisao(conjuntoTeste, previsoes2)
@@ -128,24 +152,84 @@ def main():
     print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
     print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
 
-#k = 5
-    #print('K = ' + repr(k))
-    #for x in range(len(conjuntoTeste)):
-        #vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-       # resultado = obterResposta(vizinhos)
-      #  previsoes.append(resultado)
-     #   print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
-    #precisao = obterPrecisao(conjuntoTeste, previsoes)
-    #print('Precisao: ' + repr(precisao) + '%')
-	
-#k = 9
- #   print('K = ' + repr(k))
-  #  for x in range(len(conjuntoTeste)):
-   #     vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
-    #    resultado = obterResposta(vizinhos)
-     #   previsoes.append(resultado)
-      #  print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
-   # precisao = obterPrecisao(conjuntoTeste, previsoes)
-   # print('Precisao: ' + repr(precisao) + '%')
+def knn3():
+    #Preparar os dados
+    conjuntoTreino = []
+    conjuntoTeste = []
+    dividir = 0.67				#divide 33% da base de dados para teste e 67% para treino
+    carregarBancoDeDados('basePequena.csv', dividir, conjuntoTreino, conjuntoTeste)
+    print ('Conjunto de treinamento: ') + repr(len(conjuntoTreino))
+    print ('Conjunto de teste: ') + repr(len(conjuntoTeste))
+    #Gerar previsões
+    previsoes = [] #distância Euclidiana
+    previsoes2 = [] #distância de Manhattan
+    previsoes3 = [] #distância de Bray-Curtis
 
-main()
+    k = 3   #testar com k = 3
+    print('K = ' + repr(k))
+
+    for x in range(len(conjuntoTeste)):
+        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+        resultado = obterResposta(vizinhos)
+        previsoes.append(resultado)
+
+        vizinhos2 = obterVizinhos2(conjuntoTreino, conjuntoTeste[x], k)
+        resultado2 = obterResposta(vizinhos2)
+        previsoes2.append(resultado2)
+
+        vizinhos3 = obterVizinhos3(conjuntoTreino, conjuntoTeste[x], k)
+        resultado3 = obterResposta(vizinhos3)
+        previsoes3.append(resultado3)
+        print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+
+    precisao = obterPrecisao(conjuntoTeste, previsoes)
+    precisao2 = obterPrecisao(conjuntoTeste, previsoes2)
+    precisao3 = obterPrecisao(conjuntoTeste, previsoes3)
+
+    print('Precisão usando distância Euclidiana: ' + repr(precisao) + '%')
+    print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
+    print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
+
+
+def knn19():
+    # Preparar os dados
+    conjuntoTreino = []
+    conjuntoTeste = []
+    dividir = 0.67  # divide 33% da base de dados para teste e 67% para treino
+    carregarBancoDeDados('basePequena.csv', dividir, conjuntoTreino, conjuntoTeste)
+    print ('Conjunto de treinamento: ') + repr(len(conjuntoTreino))
+    print ('Conjunto de teste: ') + repr(len(conjuntoTeste))
+    # Gerar previsões
+    previsoes = []  # distância Euclidiana
+    previsoes2 = []  # distância de Manhattan
+    previsoes3 = []  # distância de Bray-Curtis
+
+    k = 19  # testar com K 19
+    print('K = ' + repr(k))
+
+    for x in range(len(conjuntoTeste)):
+        vizinhos = obterVizinhos(conjuntoTreino, conjuntoTeste[x], k)
+        resultado = obterResposta(vizinhos)
+        previsoes.append(resultado)
+
+        vizinhos2 = obterVizinhos2(conjuntoTreino, conjuntoTeste[x], k)
+        resultado2 = obterResposta(vizinhos2)
+        previsoes2.append(resultado2)
+
+        vizinhos3 = obterVizinhos3(conjuntoTreino, conjuntoTeste[x], k)
+        resultado3 = obterResposta(vizinhos3)
+        previsoes3.append(resultado3)
+
+        print('> previsto=' + repr(resultado) + ', atual=' + repr(conjuntoTeste[x][-1]))
+
+    precisao = obterPrecisao(conjuntoTeste, previsoes)
+    precisao2 = obterPrecisao(conjuntoTeste, previsoes2)
+    precisao3 = obterPrecisao(conjuntoTeste, previsoes3)
+
+    print('Precisão usando distância Euclidiana: ' + repr(precisao) + '%')
+    print('Precisão usando distância de Manhattan: ' + repr(precisao2) + '%')
+    print('Precisão usando distância de Bray-Curis: ' + repr(precisao3) + '%')
+
+knn19()
+knn5()
+knn3()
